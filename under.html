@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>under...</title>
+        <link rel="stylesheet" href="def.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Under...</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div style="position: absolute; left: 50%; transform: translateX(-50%) translateY(-50%);">
+            <h6 style="text-align: center; padding: 0%; margin: 0%;">...</h6>
+            <a href="index.html"><canvas id="canva1" width="480" height="32"></canvas></a>
+        </div>
+
+        <script>
+            var cv = document.getElementById("canva1");
+            var ctx = cv.getContext("2d");
+            
+            var ctr1 = 0;
+            var itv = setInterval(function() {
+                ctr1++;
+                let thue = Math.round(Math.abs(Math.sin(ctr1)) * 360);
+                let tfw = Math.round(Math.abs(Math.cos(ctr1)) * 480);
+                let tfx = (480 - tfw) / 2;
+                ctx.fillStyle = "hsl(" + thue.toString() + " 85% 50%)";
+                ctx.fillRect(tfx, 0, tfw, 32);
+            }, 40);
+        </script>
+    </body>
+</html>

@@ -1,10 +1,24 @@
 <html>
     <head>
         <title>Under heavy construction...</title>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="def.css">
     </head>
     <body>
-        <h1>UNDER CONSTRUCTION</h1>
-        <p>im not gonna finish this gosh darn website forever :3</p>
+        <h1><a href="under.html">UNDER</a> CONSTRUCTION</h1>
+        <div id="cover1">
+            <p>im not gonna finish this gosh darn website forever :3</p>
+            <p>F O R E V E R</p>
+        </div>
+
+        <script>
+            var cv1 = document.getElementById("cover1");
+            cv1.style.position = "absolute";
+
+            var ctr1 = 0;
+            var itv = setInterval(function() {
+                ctr1++;
+                cv1.style.left = Math.round(Math.abs(Math.sin(ctr1)) * 100) + "px";
+            }, 10);
+        </script>
     </body>
 </html>

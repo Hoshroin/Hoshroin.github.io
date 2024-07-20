@@ -2,11 +2,17 @@ body {
     background-color: #111313;
 }
 
-p {
+p, h6 {
     color: #f4fdff;
 }
 
 h1 {
+    color: #f4fdff;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
     color: #f4fdff;
 }
 
