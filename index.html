@@ -4,20 +4,35 @@
         <link rel="stylesheet" href="def.css">
     </head>
     <body>
-        <h1><a href="under.html">UNDER</a> CONSTRUCTION</h1>
-        <div id="cover1">
+        <h1>UNDER CONSTRUCTION</h1>
+        <div id="paragraph1">
             <p>im not gonna finish this gosh darn website forever :3</p>
-            <p>F O R E V E R</p>
+            <canvas id="canva1" width="360" height="32"></canvas>
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <p><a href="preview.html">however, here's some preview :3</a></p>
 
         <script>
-            var cv1 = document.getElementById("cover1");
-            cv1.style.position = "absolute";
+            var cv1 = document.getElementById("canva1");
+            var ctx1 = cv1.getContext("2d");
+            ctx1.font = "32px serif";
+
+            var pg1 = document.getElementById("paragraph1");
+            pg1.style.position = "absolute";
 
             var ctr1 = 0;
             var itv = setInterval(function() {
                 ctr1++;
-                cv1.style.left = Math.round(Math.abs(Math.sin(ctr1)) * 100) + "px";
+                pg1.style.top = Math.round(Math.abs(Math.sin(ctr1)) * 80) + "px";
+
+                let thue = Math.round(Math.abs(Math.sin(ctr1)) * 360);
+                let tfw = Math.round(Math.abs(Math.cos(ctr1)) * 360);
+                let tfx = (360 - tfw) / 2;
+                ctx1.fillStyle = "hsl(" + thue.toString() + " 85% 50%)";
+                ctx1.fillRect(tfx, 0, tfw, 32);
+
+                ctx1.fillStyle = "hsl(" + (360 - thue).toString() + " 85% 50%)";
+                ctx1.fillText("F O R E V E R", 72, 32);
             }, 10);
         </script>
     </body>

@@ -1,0 +1,30 @@
+#header {
+    padding: 0%;
+    margin-left: 24px;
+    margin-top: 30px;
+    width: 170px;
+
+    border: 2px white solid;
+    background-color: rgb(22, 10, 10);
+}
+
+#header-menu-title1 {
+    margin-top: 4px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    font-size: 20px;
+}
+
+#header-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+}
+
+.header-menu-entry {
+    color: rgb(23, 115, 190);
+}
+
+li {
+    flex-grow: 1;
+}
